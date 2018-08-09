@@ -4,10 +4,10 @@ import WorkoutExerciseElement from 'WorkoutExerciseElement/WorkoutExerciseElemen
 const WorkoutExerciseList = (props) => {
   return (
     <div className="WorkoutExerciseList">
-      <h3>Exercises</h3>
       <ul>
-        {props.workout_exercises.map((workout_exercise) =>
-          <WorkoutExerciseElement key={workout_exercise.id} workout_exercise={workout_exercise} />
+        {props.workoutExercises.map((workoutExercise) =>
+          <WorkoutExerciseElement key={workoutExercise.id} workoutExercise={workoutExercise}
+          handleWorkoutExerciseRemove={props.handleWorkoutExerciseRemove} />
         )}
       </ul>
     </div>
@@ -15,7 +15,7 @@ const WorkoutExerciseList = (props) => {
 }
 
 WorkoutExerciseList.defaultProps = {
-  workout_exercises: []
+  workoutExercises: []
 }
 
 export default WorkoutExerciseList;

@@ -3,9 +3,11 @@ import Exercise from 'Exercise/Exercise'
 
 const WorkoutExerciseElement = (props) => {
   return (
-    <li className="WorkoutExerciseElement" key={props.workout_exercise.exercise.name}>
-      <Exercise exercise={props.workout_exercise.exercise} />
-      {props.workout_exercise.sets} x {props.workout_exercise.reps}
+    <li className="WorkoutExerciseElement" key={props.workoutExercise.exercise.name}>
+      <Exercise exercise={props.workoutExercise.exercise} />
+      {props.workoutExercise.sets} x {props.workoutExercise.reps}
+      <button onClick={props.handleWorkoutExerciseRemove}>Remove this exercise</button>
+      <button>Edit this exercise</button>
     </li>
   );
 }
